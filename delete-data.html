@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete your data · Braceloft</title>
+<style>
+  :root { --bg:#0e1626; --card:#16213a; --ink:#f3ead8; --muted:#b9b1a2; --gold:#d9a95b; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+  header { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  h1 { font-family:Georgia, serif; letter-spacing:.12em; font-weight:400; margin:0; color:var(--ink); }
+  h2 { color:var(--gold); font-size:1.05rem; margin:28px 0 6px; }
+  nav a, .lang button { color:var(--gold); background:none; border:1px solid var(--gold); border-radius:999px; padding:4px 12px; font:inherit; text-decoration:none; cursor:pointer; }
+  .lang button[aria-pressed="true"] { background:var(--gold); color:var(--bg); }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin-top:20px; }
+  .muted { color:var(--muted); font-size:.92rem; }
+  ul { padding-left:20px; }
+  a { color:var(--gold); }
+  [data-lang] { display:none; } body.en [data-lang="en"], body.tr [data-lang="tr"] { display:block; }
+</style>
+</head>
+<body class="en">
+<main>
+<header>
+  <h1>BRACELOFT</h1>
+  <div class="lang"><nav><a href="support.html">Support / Destek</a></nav></div>
+  <div class="lang"><button id="b-en" aria-pressed="true" onclick="setLang('en')">EN</button> <button id="b-tr" aria-pressed="false" onclick="setLang('tr')">TR</button></div>
+</header>
+
+<div class="card" data-lang="en">
+<h2 style="margin-top:0">Delete your data: Braceloft</h2>
+<p class="muted">Braceloft: Cozy Physics Puzzle · MOFAY Games · Android and iOS</p>
+<p>Braceloft has no player account and we do not run a server that stores your progress. You can delete your data yourself, or ask us to help.</p>
+<h2>1. Progress on your device</h2>
+<ul>
+<li>Android: Settings → Apps → Braceloft → Storage → Clear storage, or uninstall the game.</li>
+<li>iOS: delete the game; to also remove the iCloud copy, Settings → [your name] → iCloud → Manage Storage → Braceloft → Delete Data.</li>
+</ul>
+<p>This permanently deletes levels, medals, brass, garden, cosmetics and settings. Purchases stay with your Google Play or Apple account and can be restored with Restore purchases.</p>
+<h2>2. Advertising data</h2>
+<p>Ads are served by Unity LevelPlay and Unity Ads. Reset or delete your Android advertising ID (Settings → Privacy → Ads) so it can no longer be linked to past ad activity. To ask Unity to delete data linked to your device, use the request options in the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity privacy policy</a>.</p>
+<h2>3. Ask us</h2>
+<p>Email <a href="mailto:oguzhanaygunpr@gmail.com?subject=Braceloft%20data%20deletion">oguzhanaygunpr@gmail.com</a> with the subject "Braceloft data deletion". We will delete any emails and information you sent us and help with requests to Unity within 30 days. We keep nothing else: purchase records are kept by Google or Apple under their own policies.</p>
+</div>
+
+<div class="card" data-lang="tr">
+<h2 style="margin-top:0">Verilerini sil: Braceloft</h2>
+<p class="muted">Braceloft: Fizik Zeka Oyunu · MOFAY Games · Android ve iOS</p>
+<p>Braceloft'ta oyuncu hesabı yoktur ve ilerlemeni saklayan bir sunucu işletmiyoruz. Verilerini kendin silebilir ya da bizden yardım isteyebilirsin.</p>
+<h2>1. Cihazındaki ilerleme</h2>
+<ul>
+<li>Android: Ayarlar → Uygulamalar → Braceloft → Depolama → Depolamayı temizle ya da oyunu kaldır.</li>
+<li>iOS: oyunu sil; iCloud kopyasını da kaldırmak için Ayarlar → [adın] → iCloud → Depolamayı Yönet → Braceloft → Verileri Sil.</li>
+</ul>
+<p>Bu işlem bölümleri, rozetleri, pirinci, bahçeyi, kozmetikleri ve ayarları kalıcı olarak siler. Satın almaların Google Play veya Apple hesabında kalır ve Satın alımları geri yükle ile geri alınabilir.</p>
+<h2>2. Reklam verileri</h2>
+<p>Reklamlar Unity LevelPlay ve Unity Ads tarafından sunulur. Android reklam kimliğini sıfırla veya sil (Ayarlar → Gizlilik → Reklamlar); böylece geçmiş reklam etkinliğine bağlanamaz. Unity'den cihazına bağlı verileri silmesini istemek için <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity gizlilik politikasındaki</a> talep seçeneklerini kullan.</p>
+<h2>3. Bize yaz</h2>
+<p><a href="mailto:oguzhanaygunpr@gmail.com?subject=Braceloft%20data%20deletion">oguzhanaygunpr@gmail.com</a> adresine "Braceloft data deletion" konusuyla yaz. Bize gönderdiğin e-postaları ve bilgileri siler, Unity'ye yapılacak taleplerde 30 gün içinde yardımcı oluruz. Başka bir şey saklamıyoruz; satın alma kayıtlarını Google veya Apple kendi politikalarına göre tutar.</p>
+</div>
+<p class="muted" style="margin-top:24px">© 2026 MOFAY Games · Braceloft · <a href="privacy.html">Privacy / Gizlilik</a></p>
+</main>
+<script>
+function setLang(l){document.body.className=l;document.getElementById('b-en').setAttribute('aria-pressed',l==='en');document.getElementById('b-tr').setAttribute('aria-pressed',l==='tr');document.documentElement.lang=l;try{localStorage.setItem('bl-lang',l)}catch(e){}}
+try{var s=localStorage.getItem('bl-lang')||((navigator.language||'').toLowerCase().indexOf('tr')===0?'tr':'en');setLang(s)}catch(e){}
+</script>
+</body>
+</html>
