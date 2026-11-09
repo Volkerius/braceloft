@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · Braceloft</title>
+<style>
+  :root { --bg:#0e1626; --card:#16213a; --ink:#f3ead8; --muted:#b9b1a2; --gold:#d9a95b; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+  header { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; }
+  h1 { font-family:Georgia, serif; letter-spacing:.12em; font-weight:400; margin:0; color:var(--ink); }
+  h2 { color:var(--gold); font-size:1.05rem; margin:28px 0 6px; }
+  nav a, .lang button { color:var(--gold); background:none; border:1px solid var(--gold); border-radius:999px; padding:4px 12px; font:inherit; text-decoration:none; cursor:pointer; }
+  .lang button[aria-pressed="true"] { background:var(--gold); color:var(--bg); }
+  .card { background:var(--card); border-radius:16px; padding:20px 22px; margin-top:20px; }
+  .muted { color:var(--muted); font-size:.92rem; }
+  ul { padding-left:20px; }
+  a { color:var(--gold); }
+  [data-lang] { display:none; } body.en [data-lang="en"], body.tr [data-lang="tr"] { display:block; }
+</style>
+</head>
+<body class="en">
+<main>
+<header>
+  <h1>BRACELOFT</h1>
+  <div class="lang"><nav><a href="privacy.html">Privacy / Gizlilik</a></nav></div>
+  <div class="lang"><button id="b-en" aria-pressed="true" onclick="setLang('en')">EN</button> <button id="b-tr" aria-pressed="false" onclick="setLang('tr')">TR</button></div>
+</header>
+
+<div class="card" data-lang="en">
+<h2 style="margin-top:0">Support</h2>
+<p>Braceloft is a calm demolition puzzle: cut the joints, brace with ropes and bring the old frames down without touching the glass garden.</p>
+<h2>Stuck on a level?</h2>
+<p>Tap the ? button. After 2 tries the result screen offers a hint; you can unlock the first step with a short video or with brass.</p>
+<h2>Purchases</h2>
+<p>Remove Ads and the cosmetic looks are one-time purchases. On a new phone open Shop → Restore purchases. Refunds are handled by Google Play or the App Store.</p>
+<h2>Your data</h2>
+<p>Progress is saved on your device. To delete it, clear the app's data or uninstall the Game. See the <a href="privacy.html">Privacy Policy</a>.</p>
+<h2>Contact</h2>
+<p>✉️ <a href="mailto:oguzhanaygunpr@gmail.com">oguzhanaygunpr@gmail.com</a></p>
+</div>
+<div class="card" data-lang="tr">
+<h2 style="margin-top:0">Destek</h2>
+<p>Braceloft sakin bir yıkım bulmacasıdır: bağlantıları kes, halatlarla destekle ve eski çerçeveleri cam bahçeye dokunmadan indir.</p>
+<h2>Bir bölümde mi takıldın?</h2>
+<p>? düğmesine dokun. 2 denemeden sonra sonuç ekranında ipucu çıkar; ilk adımı kısa bir videoyla ya da pirinçle açabilirsin.</p>
+<h2>Satın almalar</h2>
+<p>Reklamları Kaldır ve kozmetik görünümler bir kerelik satın almalardır. Yeni telefonda Mağaza → Satın alımları geri yükle'ye dokun. İadeleri Google Play veya App Store yürütür.</p>
+<h2>Verilerin</h2>
+<p>İlerlemen cihazında saklanır. Silmek için uygulama verilerini temizle veya Oyun'u kaldır. <a href="privacy.html">Gizlilik Politikası</a>'na bak.</p>
+<h2>İletişim</h2>
+<p>✉️ <a href="mailto:oguzhanaygunpr@gmail.com">oguzhanaygunpr@gmail.com</a></p>
+</div>
+<p class="muted" style="margin-top:24px">© 2026 MOFAY Games · Braceloft</p>
+</main>
+<script>
+function setLang(l){document.body.className=l;document.getElementById('b-en').setAttribute('aria-pressed',l==='en');document.getElementById('b-tr').setAttribute('aria-pressed',l==='tr');document.documentElement.lang=l;try{localStorage.setItem('bl-lang',l)}catch(e){}}
+try{var s=localStorage.getItem('bl-lang')||((navigator.language||'').toLowerCase().indexOf('tr')===0?'tr':'en');setLang(s)}catch(e){}
+</script>
+</body>
+</html>
